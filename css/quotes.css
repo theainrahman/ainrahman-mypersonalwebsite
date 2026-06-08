@@ -1,0 +1,138 @@
+.quotes-body {
+  font-family: 'Poppins', sans-serif;
+  margin: 0;
+  position: relative;
+  overflow-x: hidden;
+  overflow-y: auto;
+  background: linear-gradient(120deg, #ffb6c1, #ffc0cb, #ffeef8, #e6b3ff);
+  background-size: 400% 400%;
+  animation: auroraFlow 15s ease infinite;
+}
+
+🌈 Aurora gradient 
+@keyframes auroraFlow {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+/* ✨ Sparkle overlay */
+.quotes-body::before {
+  content: "";
+  position: fixed;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+  background-image: radial-gradient(circle, rgba(255,255,255,0.6) 2px, transparent 3px);
+  background-size: 150px 150px;
+  animation: sparkle 6s infinite alternate;
+  z-index: 0;
+  pointer-events: none;
+}
+
+@keyframes sparkle {
+  0% { opacity: 0.3; transform: scale(1); }
+  50% { opacity: 0.8; transform: scale(1.05); }
+  100% { opacity: 0.4; transform: scale(1); }
+}
+
+/* 🌸 Navbar */
+.navbar {
+  background-color: #ff69b4;
+  text-align: center;
+  padding: 15px 0;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 1000;
+  box-shadow: 0 2px 10px rgba(255,105,180,0.3);
+}
+
+.navbar a {
+  color: white;
+  text-decoration: none;
+  padding: 14px 20px;
+  font-weight: bold;
+  transition: background-color 0.3s;
+}
+
+.navbar a:hover {
+  background-color: #ff1493;
+  border-radius: 5px;
+}
+
+/* 🌸 Title */
+.quotes-title {
+  text-align: center;
+  color: #ff1493;
+  font-size: 40px;
+  margin-top: 100px;
+  text-shadow: 2px 2px 8px rgba(255,105,180,0.5);
+  position: relative;
+  z-index: 1;
+  animation: fadeInTitle 2s ease forwards;
+  opacity: 0;
+}
+
+@keyframes fadeInTitle {
+  from { opacity: 0; transform: translateY(-20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* 💖 Quote Card */
+.quote-card {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 50px auto;
+  position: relative;
+  z-index: 1;
+}
+
+.quote-image {
+  width: 600px;
+  border-radius: 20px;
+  box-shadow: 0 0 30px rgba(255,182,193,0.6);
+  animation: fadeInImage 2.5s ease forwards, glowPulse 6s ease-in-out infinite;
+  opacity: 0;
+}
+
+/* ✨ Fade-in + Glow */
+@keyframes fadeInImage {
+  from { opacity: 0; transform: translateY(40px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes glowPulse {
+  0% { box-shadow: 0 0 20px rgba(255,182,193,0.5); }
+  50% { box-shadow: 0 0 40px rgba(255,105,180,0.7); }
+  100% { box-shadow: 0 0 20px rgba(255,182,193,0.5); }
+}
+/* ── Sparkling Cursor ── */
+.cursor-spark {
+  position: fixed;
+  pointer-events: none;
+  z-index: 9999;
+  animation: sparkFade 0.9s ease forwards;
+  user-select: none;
+}
+
+@keyframes sparkFade {
+  0%   { opacity: 1; transform: translate(-50%, -50%) scale(1); }
+  100% { opacity: 0; transform: translate(-50%, -50%) scale(0) translateY(-20px); }
+}
+
+/* Footer */
+footer {
+  background-color: #ffb6c1;
+  color: white;
+  text-align: center;
+  padding: 15px;
+  margin-top: 40px;
+  font-size: 14px;
+  border-top: 2px solid #ff69b4;
+}
+
+footer a {
+  color: #fff;
+  text-decoration: underline;
+}

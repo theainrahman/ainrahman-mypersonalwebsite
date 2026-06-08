@@ -1,0 +1,22 @@
+// cursor.js
+const sparkle = document.createElement("div");
+sparkle.id = "sparkle-cursor";
+document.body.appendChild(sparkle);
+
+document.addEventListener("mousemove", (e) => {
+  sparkle.style.left = e.pageX + "px";
+  sparkle.style.top = e.pageY + "px";
+});
+
+const colors = ['#ffb3d9','#ffd6ec','#ff85c0','#fff0f6','#ffcce7','#f9a8d4'];
+const shapes = ['✦','✧','⋆','✿','·','★','❀'];
+
+document.addEventListener('mousemove', (e) => {
+  if (Math.random() > 0.4) return;
+  const spark = document.createElement('span');
+  spark.className = 'cursor-spark';
+  spark.textContent = shapes[Math.floor(Math.random() * shapes.length)];
+  spark.style.cssText = `left:${e.clientX}px;top:${e.clientY}px;color:${colors[Math.floor(Math.random() * colors.length)]};font-size:${10 + Math.random() * 14}px;`;
+  document.body.appendChild(spark);
+  setTimeout(() => spark.remove(), 900);
+});
