@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Ain Rahman Personal Website</title>
+  <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Welcome to Ain Rahman’s personal website — sharing   routines, stories, and little moments.">
+    <meta name="keywords" content="Ain Rahman, personal website, UiTM Kedah, routines, stories, moments">
+    <meta name="author" content="Ain Rahman">
+
+  <link rel="stylesheet" href="css/style.css">
+
+</head>
+<body>
+
+  <!-- Loading Screen -->
+  <div id="preloader">
+    <img src="images/logo1.png" alt="Logo" class="logo">
+    <div class="bubbles">
+      <span></span><span></span><span></span><span></span><span></span>
+    </div>
+  </div>
+
+  <!-- Navigation bar -->
+  <div class="navbar">
+    <a href="index.html">Home</a>
+    <a href="aboutme.html">About Me</a>
+    <a href="family.html">My Family</a>
+    <a href="education.html">Education</a>
+    <a href="myroutine.html">My Routine</a>
+    <a href="mypets.html">My Pets</a>
+    <a href="gallery.html">Gallery</a>
+    <a href="moments.html">Moments</a>
+    <a href="playlist.html">Playlist</a>
+    <a href="quotes.html">Quotes</a>
+    <a href="randomfacts.html" class="active">Random Facts</a>
+  </div>
+
+  <h1 class="title">My Personal Website ❤️</h1>
+
+</script>  
+  <!-- Intro Section -->
+  <section class="intro">
+    <p>Welcome to Ainrahman’s personal space🌸 a place where I share my stories, routines, and little moments that make life beautiful.</p>
+  </section>
+
+  <img src="images/banner5.png" alt="Website Banner" class="banner">
+
+  <!-- Quick Links -->
+  <section class="highlights">
+    <div class="card"><a href="aboutme.html">🌸 About Me</a></div>
+    <div class="card"><a href="gallery.html">📸 Gallery</a></div>
+    <div class="card"><a href="quotes.html">💬 Quotes</a></div>
+  </section>
+
+  <!-- Footer -->
+<footer>
+  <p>Contact: <a href="mailto:theainrahman@gmail.com">theainrahman@gmail.com</a></p>
+  <p>© 2026 Ain Rahman | Last updated 08 June 2026</p>
+</footer>
+
+  <script src="js/music.js"></script>
+  <script>
+    // Auto hide preloader after 2.5s
+    document.addEventListener("DOMContentLoaded", () => {
+      const preloader = document.getElementById("preloader");
+      setTimeout(() => {
+        preloader.style.opacity = "0";
+        setTimeout(() => {
+          preloader.style.display = "none";
+        }, 800);
+      }, 2500);
+    });
+  </script>
+
+<script>
+  const colors = ['#ffb3d9','#ffd6ec','#ff85c0','#fff0f6','#ffcce7','#f9a8d4'];
+  const shapes = ['✦','✧','⋆','✿','·','★','❀'];
+
+  document.addEventListener('mousemove', (e) => {
+    if (Math.random() > 0.4) return;
+    const spark = document.createElement('span');
+    spark.className = 'cursor-spark';
+    spark.textContent = shapes[Math.floor(Math.random() * shapes.length)];
+    spark.style.cssText = `
+      left:${e.clientX}px;
+      top:${e.clientY}px;
+      color:${colors[Math.floor(Math.random() * colors.length)]};
+      font-size:${10 + Math.random() * 14}px;
+    `;
+    document.body.appendChild(spark);
+    setTimeout(() => spark.remove(), 900);
+  });
+
+</script>
+
+</body>
+</html>

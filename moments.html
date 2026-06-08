@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Moments</title>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Special moments of Ain Rahman — family trips, fun nights, and cherished memories.">
+<meta name="keywords" content="Ain Rahman, moments, family trip, Sky Luge KL, Sekinchan, memories">
+<meta name="author" content="Ain Rahman">
+
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/moments.css">
+</head>
+<body class="moments-body">
+
+  <!-- Navbar -->
+  <div class="navbar">
+    <a href="index.html">Home</a>
+    <a href="aboutme.html">About Me</a>
+    <a href="family.html">My Family</a>
+    <a href="education.html">Education</a>
+    <a href="myroutine.html">My Routine</a>
+    <a href="mypets.html">My Pets</a>
+    <a href="gallery.html">Gallery</a>
+    <a href="moments.html">Moments</a>
+    <a href="playlist.html">Playlist</a>
+    <a href="quotes.html">Quotes</a>
+    <a href="randomfacts.html" class="active">Random Facts</a>
+  </div>
+
+  <!-- 🌸 Title -->
+  <h1 class="moments-title">Special Moments ✨</h1>
+
+  <!-- 🌸 Moments Section -->
+  <section class="moments">
+
+    <div class="moment-card">
+      <h3>🌾 Family Trip to Sekinchan</h3>
+      <div class="video-wrapper">
+        <video width="640" controls autoplay muted>
+          <source src="videos/moment1.mp4" type="video/mp4">
+        </video>
+      </div>
+      <p style="text-align:center; color:#ff69b4; font-size:13px;">🔊 Click the sound icon in the video to unmute</p>
+      <p class="moment-caption">Raya Haji holidays with family 🌸</p>
+    </div>
+
+    <div class="moment-card">
+      <h3>🎢 Night Fun at Sky Luge KL</h3>
+      <div class="video-wrapper">
+        <video width="640" controls autoplay muted>
+          <source src="videos/moment2.mp4" type="video/mp4">
+        </video>
+      </div>
+      <p style="text-align:center; color:#ff69b4; font-size:13px;">🔊 Click the sound icon in the video to unmute</p>
+      <p class="moment-caption">Night adventure at Sky Luge KL💖</p>
+    </div>
+  </section>
+
+  <script src="js/cursor.js"></script>
+<script>
+  const colors = ['#ffb3d9','#ffd6ec','#ff85c0','#fff0f6','#ffcce7','#f9a8d4'];
+  const shapes = ['✦','✧','⋆','✿','·','★','❀'];
+  document.addEventListener('mousemove', (e) => {
+    if (Math.random() > 0.4) return;
+    const spark = document.createElement('span');
+    spark.className = 'cursor-spark';
+    spark.textContent = shapes[Math.floor(Math.random() * shapes.length)];
+    spark.style.cssText = `left:${e.clientX}px;top:${e.clientY}px;color:${colors[Math.floor(Math.random() * colors.length)]};font-size:${10 + Math.random() * 14}px;`;
+    document.body.appendChild(spark);
+    setTimeout(() => spark.remove(), 900);
+  });
+
+</script>
+
+<!-- Footer -->
+<footer>
+  <p>Contact: <a href="mailto:theainrahman@gmail.com">theainrahman@gmail.com</a></p>
+  <p>© 2026 Ain Rahman | Last updated 08 June 2026</p>
+</footer>
+
+</body>
+</html>

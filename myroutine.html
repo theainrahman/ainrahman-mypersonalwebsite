@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>My Routine - Ainrahman</title>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Daily routine of Ain Rahman — classes, study, and campus life.">
+<meta name="keywords" content="Ain Rahman, routine, daily schedule, study, UiTM Kedah, hobbies">
+<meta name="author" content="Ain Rahman">
+
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body class="routine-body">
+
+  <!-- Navbar -->
+  <div class="navbar">
+    <a href="index.html">Home</a>
+    <a href="aboutme.html">About Me</a>
+    <a href="family.html">My Family</a>
+    <a href="education.html">Education</a>
+    <a href="myroutine.html">My Routine</a>
+    <a href="mypets.html">My Pets</a>
+    <a href="gallery.html">Gallery</a>
+    <a href="moments.html">Moments</a>
+    <a href="playlist.html">Playlist</a>
+    <a href="quotes.html">Quotes</a>
+    <a href="randomfacts.html" class="active">Random Facts</a>
+  </div>
+
+  <!-- Title -->
+  <h1 class="routine-title">My Daily Routine 🌸</h1>
+
+  <!-- Routine Table -->
+  <section class="routine-section">
+    <table class="routine-table">
+      <tr>
+        <th>Time</th>
+        <th>Activity</th>
+      </tr>
+      <tr>
+        <td>6:00 AM</td>
+        <td>Wake up and morning prayer</td>
+      </tr>
+      <tr>
+        <td>6:30 AM</td>
+        <td>Prepare for go to class</td>
+      </tr>
+      <tr>
+        <td>8:00 AM</td>
+        <td>Class or study session</td>
+      </tr>
+      <tr>
+        <td>12:30 PM</td>
+        <td>Lunch & short rest</td>
+      </tr>
+      <tr>
+        <td>2:00 PM</td>
+        <td>Do prayer and do assignments</td>
+      </tr>
+      <tr>
+        <td>4:00 PM</td>
+        <td>Do prayer and class</td>
+      </tr>
+      <tr>
+        <td>7:00 PM</td>
+        <td>Do prayer, dinner & relax time</td>
+      </tr>
+      <tr>
+        <td>9:00 PM</td>
+        <td>Do prayer, study or scrolling social media</td>
+      </tr>
+      <tr>
+        <td>11:00 PM</td>
+        <td>Prepare for bed</td>
+      </tr>
+    </table>
+  </section>
+<script src="js/music.js"></script>
+<script src="js/cursor.js"></script>
+<script>
+  const colors = ['#ffb3d9','#ffd6ec','#ff85c0','#fff0f6','#ffcce7','#f9a8d4'];
+  const shapes = ['✦','✧','⋆','✿','·','★','❀'];
+  document.addEventListener('mousemove', (e) => {
+    if (Math.random() > 0.4) return;
+    const spark = document.createElement('span');
+    spark.className = 'cursor-spark';
+    spark.textContent = shapes[Math.floor(Math.random() * shapes.length)];
+    spark.style.cssText = `left:${e.clientX}px;top:${e.clientY}px;color:${colors[Math.floor(Math.random() * colors.length)]};font-size:${10 + Math.random() * 14}px;`;
+    document.body.appendChild(spark);
+    setTimeout(() => spark.remove(), 900);
+  });
+
+</script>
+
+<!-- Footer -->
+<footer>
+  <p>Contact: <a href="mailto:theainrahman@gmail.com">theainrahman@gmail.com</a></p>
+  <p>© 2026 Ain Rahman | Last updated 08 June 2026</p>
+</footer>
+
+</body>
+</html>

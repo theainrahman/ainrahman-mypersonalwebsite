@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Random facts about Ain Rahman — fun, quirky, and personal details.">
+<meta name="keywords" content="Ain Rahman, random facts, fun facts, personal life, quirky details">
+<meta name="author" content="Ain Rahman">
+
+  <title>Random Facts</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/randomfacts.css">
+</head>
+<body>
+
+  <!-- Navigation bar -->
+  <div class="navbar">
+    <a href="index.html">Home</a>
+    <a href="aboutme.html">About Me</a>
+    <a href="family.html">My Family</a>
+    <a href="education.html">Education</a>
+    <a href="myroutine.html">My Routine</a>
+    <a href="mypets.html">My Pets</a>
+    <a href="gallery.html">Gallery</a>
+    <a href="moments.html">Moments</a>
+    <a href="playlist.html">Playlist</a>
+    <a href="quotes.html">Quotes</a>
+    <a href="randomfacts.html" class="active">Random Facts</a>
+  </div>
+
+  <!-- Hero Title -->
+  <div class="rf-hero">
+    <h1 class="rf-title">✦ Random Facts ✦</h1>
+    <p class="rf-subtitle">Get to know me through some random facts!</p>
+    <div class="rf-heart">🤍</div>
+  </div>
+
+  <!-- Cards Grid -->
+  <section class="rf-grid">
+
+    <div class="fact-card" id="things">
+      <div class="card-icon">🍽️</div>
+      <h3>Things I Like</h3>
+      <p>I love to eat Gepuk Mahsuri almost every day without getting bored because it's my ultimate comfort food. The combination of spicy sambal and fried chicken just hits differently every single time. Besides that, I'm a big fan of iced milk tea drinks, and side dishes especially when I'm working on assignments or watching my favorite movies.</p>
+    </div>
+
+    <div class="fact-card" id="music">
+      <div class="card-icon">🎧</div>
+      <h3>Music</h3>
+      <p>Music is my best companion during study sessions and quiet nights. It helps me focus, calm my thoughts, and sometimes even lift my mood when I'm tired. My playlist changes depending on how I feel like sometimes upbeat pop songs, sometimes soft indie tunes, and occasionally sentimental ballads that remind me of special memories.</p>
+    </div>
+
+    <div class="fact-card" id="habits">
+      <div class="card-icon">🌙</div>
+      <h3>Habits</h3>
+      <p>I'm most productive at night when everything feels peaceful and quiet. That's when ideas start flowing and I can concentrate better. I often end up opening too many tabs because I get curious about random things but that's how I learn and explore new ideas. Besides, I usually watch my favourite dramas before going to bed, hahaha!</p>
+    </div>
+
+    <div class="fact-card" id="dreams">
+      <div class="card-icon">💭</div>
+      <h3>Dreams & Goals</h3>
+      <p>Honestly, I just follow the flow of life without stressing too much about the future, but of course I dream of being successful and living comfortably one day. Deep down, I really hope to be financially stable and yes, I want to be rich! I also wish to travel and explore libraries or bookstores in other countries someday.</p>
+    </div>
+
+    <div class="fact-card" id="funfact">
+      <div class="card-icon">🎀</div>
+      <h3>Random Fun Fact</h3>
+      <p>I can spend hours reading random articles online about things I never knew I was interested in. One minute I'm reading about space, the next about ancient history or cute animals! My brain just loves collecting little bits of random knowledge.</p>
+    </div>
+
+    <div class="fact-card" id="nutshell">
+      <div class="card-icon">⭐</div>
+      <h3>In a Nutshell</h3>
+      <p>Foodie, music lover, night owl, dreamer, and always curious about the world. That's me in a few words! I believe in enjoying the little things in life and surrounding myself with good people, good food, and good vibes always. 🌸</p>
+    </div>
+
+  </section>
+
+  <!-- Deco elements -->
+  <div class="deco deco-left">🌿</div>
+  <div class="deco deco-right">📚</div>
+
+  <script src="js/music.js"></script>
+  <script src="js/cursor.js"></script>
+  <script>
+    const colors = ['#ffb3d9','#ffd6ec','#ff85c0','#fff0f6','#ffcce7','#f9a8d4'];
+    const shapes = ['✦','✧','⋆','✿','·','★','❀'];
+    document.addEventListener('mousemove', (e) => {
+      if (Math.random() > 0.4) return;
+      const spark = document.createElement('span');
+      spark.className = 'cursor-spark';
+      spark.textContent = shapes[Math.floor(Math.random() * shapes.length)];
+      spark.style.cssText = `left:${e.clientX}px;top:${e.clientY}px;color:${colors[Math.floor(Math.random() * colors.length)]};font-size:${10 + Math.random() * 14}px;`;
+      document.body.appendChild(spark);
+      setTimeout(() => spark.remove(), 900);
+    });
+  </script>
+
+<!-- Footer -->
+<footer>
+  <p>Contact: <a href="mailto:theainrahman@gmail.com">theainrahman@gmail.com</a></p>
+  <p>© 2026 Ain Rahman | Last updated 08 June 2026</p>
+</footer>
+
+</body>
+</html>
